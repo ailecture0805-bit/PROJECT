@@ -1,156 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>캡스톤 디자인 - 자동화 제어 & 메커니즘 프로젝트 포트폴리오</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Noto Sans KR -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포트폴리오</title>
   <style>
+    /* 전체 배경을 밝은 화이트 톤으로 설정 */
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #212529;
+      --border-color: #e9ecef;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    /* 메인 레이아웃 컨테이너 */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* 좌측 이미지 카드: 잘리지 않고 위아래 비율 전체가 나오도록 설정 */
+    .photo-card {
+      flex: 1;
+      max-width: 450px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;          /* 비율 고정 */
+      object-fit: contain;   /* 이미지 잘림(Crop) 방지 */
+      display: block;
+      border-radius: 8px;
+    }
+
+    /* 우측 내용 영역 (추후 다른 내용 추가용) */
+    .content-card {
+      flex: 1.2;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    /* 모바일 반응형 처리 */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .photo-card {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen pb-16">
+<body>
 
-  <!-- Main Container -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-    
-    <!-- 1. Header Section -->
-    <header class="mb-10 text-center sm:text-left border-b border-slate-800 pb-8">
-      <div class="inline-block bg-blue-500/10 text-blue-400 text-xs sm:text-sm font-semibold px-3 py-1 rounded-full mb-3 border border-blue-500/20">
-        ENGINEERING PORTFOLIO
-      </div>
-      <h1 class="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-2">
-        캡스톤 디자인 - 자동화 제어 & 메커니즘 프로젝트
-      </h1>
-      <p class="text-slate-400 text-sm sm:text-base">
-        PLC 및 HMI 제어 기반의 자동화 메커니즘 설계, 시퀀스 제어 및 시스템 실증
-      </p>
-    </header>
+  <div class="container">
+    <!-- 좌측: 위아래로 길게 원본 비율을 살려 보여주는 사진 카드 -->
+    <div class="photo-card">
+      <img src="profile.jpg" alt="사진" />
+    </div>
 
-    <!-- 2. Core Overview Card List -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-      <!-- Card 1: Key Competencies -->
-      <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6 shadow-lg backdrop-blur-sm">
-        <div class="flex items-center space-x-3 mb-4">
-          <div class="p-2.5 bg-blue-600/20 text-blue-400 rounded-lg">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h2 class="text-lg font-semibold text-white">주요 직무 역량</h2>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-slate-700/60 text-slate-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-md border border-slate-600/40">PLC 제어</span>
-          <span class="bg-slate-700/60 text-slate-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-md border border-slate-600/40">HMI 터치패널 설계</span>
-          <span class="bg-slate-700/60 text-slate-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-md border border-slate-600/40">액추에이터/센서 연동</span>
-          <span class="bg-slate-700/60 text-slate-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-md border border-slate-600/40">시퀀스 제어</span>
-        </div>
-      </div>
-
-      <!-- Card 2: Controller & Hardware -->
-      <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6 shadow-lg backdrop-blur-sm">
-        <div class="flex items-center space-x-3 mb-4">
-          <div class="p-2.5 bg-indigo-600/20 text-indigo-400 rounded-lg">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-            </svg>
-          </div>
-          <h2 class="text-lg font-semibold text-white">사용 제어기 & 환경</h2>
-        </div>
-        <ul class="space-y-2 text-slate-300 text-sm">
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2.5"></span>
-            <strong class="text-white mr-2">PLC:</strong> LS일렉트릭 PLC
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2.5"></span>
-            <strong class="text-white mr-2">HMI:</strong> LS일렉트릭 XP30 시리즈
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 3. Main Media Section (Dashboard Style: 2-Column Grid) -->
-    <section class="mb-12">
-      <h2 class="text-xl font-bold text-white mb-6 flex items-center">
-        <span class="w-1.5 h-6 bg-blue-500 rounded-full mr-3"></span>
-        시스템 구성 및 제어반
-      </h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Image 1 -->
-        <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg group">
-          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950">
-            <img 
-              src="capstone_front.jpg" 
-              alt="구동부/메커니즘 전경" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          <div class="p-4 border-t border-slate-700/60 bg-slate-800/90">
-            <h3 class="font-semibold text-white text-base mb-1">구동부 & 메커니즘 전경</h3>
-            <p class="text-xs text-slate-400">3축 메커니즘, 스텝 모터, 센서 위치 및 물리적 오토메이션 구조</p>
-          </div>
-        </div>
-
-        <!-- Image 2 -->
-        <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg group">
-          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950">
-            <img 
-              src="capstone_panel.jpg" 
-              alt="제어반/HMI 제어 화면" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          <div class="p-4 border-t border-slate-700/60 bg-slate-800/90">
-            <h3 class="font-semibold text-white text-base mb-1">제어반 & HMI 모니터링 화면</h3>
-            <p class="text-xs text-slate-400">LS일렉트릭 HMI(XP30) 모니터링 모듈 및 릴레이/전원 배선 컨트롤 박스</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Video Demonstration Section -->
-    <section class="mb-12">
-      <h2 class="text-xl font-bold text-white mb-6 flex items-center">
-        <span class="w-1.5 h-6 bg-emerald-500 rounded-full mr-3"></span>
-        자동 제어 구동 시연
-      </h2>
-
-      <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 sm:p-6 shadow-xl">
-        <div class="relative rounded-lg overflow-hidden bg-black max-w-3xl mx-auto shadow-2xl">
-          <video 
-            class="w-full h-auto max-h-[600px] object-contain mx-auto"
-            controls 
-            autoplay 
-            loop 
-            muted 
-            playsinline
-          >
-            <source src="capstone_demo.mp4" type="video/mp4">
-            브라우저가 비디오 태그를 지원하지 않습니다.
-          </video>
-        </div>
-        <div class="mt-4 text-center">
-          <p class="text-slate-300 text-sm sm:text-base font-medium">
-            "PLC 및 HMI 연동을 통한 각 축 액추에이터, 컨베이어, 타임 시퀀스 자동 제어 시연"
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center text-xs text-slate-500 pt-8 border-t border-slate-800">
-      <p>© 캡스톤 디자인 포트폴리오. All rights reserved.</p>
-    </footer>
-
+    <!-- 우측: 지정하신 불필요 텍스트 칸들은 전부 제거된 상태입니다 -->
+    <div class="content-card">
+      <!-- 여기에 추후 넣고 싶으신 다른 내용을 자유롭게 추가하시면 됩니다 -->
+    </div>
   </div>
 
 </body>
