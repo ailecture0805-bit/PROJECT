@@ -4,55 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>이원우의 졸업 과제 기록</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+      word-break: keep-all;
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen py-10 px-4 sm:px-8">
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-10 px-4 sm:px-8">
 
   <div class="max-w-6xl mx-auto space-y-8">
     
-    <header class="text-center sm:text-left border-b border-slate-200 pb-6">
+    <header class="border-b border-slate-200 pb-6">
+      <div class="inline-block bg-slate-900 text-white text-sm font-semibold px-3 py-1.5 rounded-md mb-3 shadow-sm">
+        이원우의 졸업 과제 기록
+      </div>
       <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
         융합 프로젝트: 더 안전한 기계식 주차장
       </h1>
     </header>
 
-    <main class="space-y-8">
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-        
-        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-col h-full">
-          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2 shrink-0">
+      <div class="space-y-6">
+        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
-            기계식 주차장 모형
+            PLC와 아두이노로 제어하는 주차 타워 모형
           </h2>
-          <div class="bg-slate-100 rounded-lg overflow-hidden w-full flex-1 flex items-center justify-center">
-            <img 
-              src="capstone_front.jpg" 
-              class="w-full h-auto block rounded-lg object-contain"
-              alt="기계식 주차장 모형"
-            />
+          <div class="bg-slate-100 rounded-lg overflow-hidden w-full">
+            <img src="capstone_front.jpg" class="w-full h-auto block rounded-lg object-contain" />
           </div>
         </section>
 
-        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-col h-full">
-          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2 shrink-0">
-            <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
-            터치 패널
-          </h2>
-          <div class="bg-slate-100 rounded-lg overflow-hidden w-full flex-1 flex items-center justify-center">
-            <img 
-              src="capstone_panel.jpg" 
-              class="w-full h-auto block rounded-lg object-contain"
-              alt="터치 패널"
-            />
-          </div>
-        </section>
-
-      </div>
-
-      <div class="flex justify-center w-full">
-        <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm w-full md:w-[calc(50%-0.75rem)]">
-          <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
             동작 시연
           </h2>
@@ -60,6 +50,18 @@
             <video class="w-full h-auto block bg-black rounded-lg" controls>
               <source src="capstone_demo.mp4" type="video/mp4" />
             </video>
+          </div>
+        </section>
+      </div>
+
+      <div class="space-y-6">
+        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
+            PLC용 터치패드
+          </h2>
+          <div class="bg-slate-100 rounded-lg overflow-hidden w-full">
+            <img src="capstone_panel.jpg" class="w-full h-auto block rounded-lg object-contain" />
           </div>
         </section>
       </div>
