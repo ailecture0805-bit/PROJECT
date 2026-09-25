@@ -3,65 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>캡스톤 디자인 포트폴리오</title>
+  <title>이원우의 졸업 과제 기록</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen py-10 px-4 sm:px-8">
 
-  <!-- 전체 컨테이너 폭 확장 (max-w-6xl) -->
   <div class="max-w-6xl mx-auto space-y-8">
     
     <header class="text-center sm:text-left border-b border-slate-200 pb-6">
       <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
-        캡스톤 디자인 - 자동화 제어 & 메커니즘 프로젝트
+        융합 프로젝트: 더 안전한 기계식 주차장
       </h1>
     </header>
 
     <main class="space-y-8">
       
-      <!-- 상단: 사진 1 & 사진 2 (2열 배치로 크게 보기) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         
-        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
+        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-col h-full">
+          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2 shrink-0">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
-            시스템 외관 & 메커니즘
+            기계식 주차장 모형
           </h2>
-          <div class="bg-slate-100 rounded-lg overflow-hidden w-full">
+          <div class="bg-slate-100 rounded-lg overflow-hidden w-full flex-1 flex items-center justify-center">
             <img 
               src="capstone_front.jpg" 
-              class="w-full h-auto block rounded-lg"
+              class="w-full h-auto block rounded-lg object-contain"
+              alt="기계식 주차장 모형"
             />
           </div>
         </section>
 
-        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
+        <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-col h-full">
+          <h2 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2 shrink-0">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
-            제어 패널 구성
+            터치 패널
           </h2>
-          <div class="bg-slate-100 rounded-lg overflow-hidden w-full">
+          <div class="bg-slate-100 rounded-lg overflow-hidden w-full flex-1 flex items-center justify-center">
             <img 
               src="capstone_panel.jpg" 
-              class="w-full h-auto block rounded-lg"
+              class="w-full h-auto block rounded-lg object-contain"
+              alt="터치 패널"
             />
           </div>
         </section>
 
       </div>
 
-      <!-- 하단: 동작 시연 영상 (단독 널찍한 레이아웃) -->
-      <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-        <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
-          동작 시연 영상
-        </h2>
-        <div class="bg-slate-100 rounded-lg overflow-hidden w-full">
-          <video class="w-full h-auto block bg-black rounded-lg" controls>
-            <source src="capstone_demo.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </section>
+      <div class="flex justify-center w-full">
+        <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm w-full md:w-[calc(50%-0.75rem)]">
+          <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-900 shrink-0"></span>
+            동작 시연
+          </h2>
+          <div class="bg-slate-100 rounded-lg overflow-hidden w-full">
+            <video class="w-full h-auto block bg-black rounded-lg" controls>
+              <source src="capstone_demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
+      </div>
 
     </main>
 
