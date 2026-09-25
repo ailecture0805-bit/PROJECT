@@ -4,63 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>캡스톤 디자인 포트폴리오</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen py-10 px-4 sm:px-8">
 
   <div class="max-w-4xl mx-auto space-y-8">
     
-    <!-- 1. Header: 말풍선 및 아래 설명 제거, 제목만 깔끔하게 배치 -->
     <header class="text-center sm:text-left border-b border-slate-200 pb-6">
       <h1 class="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
         캡스톤 디자인 - 자동화 제어 & 메커니즘 프로젝트
       </h1>
     </header>
 
-    <!-- 2. Main Content: 사진1 -> 사진2 -> 동영상 순서 배치 -->
     <main class="space-y-8">
       
-      <!-- [사진 1] 외관 / 메인 시스템 -->
       <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
         <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-slate-900"></span>
           시스템 외관 및 전체 메커니즘
         </h2>
-        <div class="bg-slate-100 rounded-lg p-3 flex justify-center items-center">
+        <div class="bg-slate-100 rounded-lg p-3 flex justify-center items-center w-full">
           <img 
             src="capstone_front.jpg" 
-            alt="시스템 외관" 
-            class="w-full h-auto max-h-[750px] object-contain rounded-md"
+            class="w-full h-auto max-h-[700px] object-contain rounded-md"
           />
         </div>
       </section>
 
-      <!-- [사진 2] 제어 패널 구성 -->
       <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
         <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-slate-900"></span>
           제어 패널 구성
         </h2>
-        <div class="bg-slate-100 rounded-lg p-3 flex justify-center items-center">
+        <div class="bg-slate-100 rounded-lg p-3 flex justify-center items-center w-full">
           <img 
             src="capstone_panel.jpg" 
-            alt="제어 패널" 
-            class="w-full h-auto max-h-[750px] object-contain rounded-md"
+            class="w-full h-auto max-h-[700px] object-contain rounded-md"
           />
         </div>
       </section>
 
-      <!-- [동영상] 동작 시연 -->
       <section class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
         <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-slate-900"></span>
           동작 시연 영상
         </h2>
-        <div class="rounded-lg overflow-hidden bg-black">
-          <video class="w-full h-auto max-h-[600px] rounded-lg" controls>
+        <div class="bg-slate-100 rounded-lg p-3 flex justify-center items-center w-full">
+          <video class="w-full h-auto max-h-[700px] rounded-md bg-black" controls>
             <source src="capstone_demo.mp4" type="video/mp4" />
-            브라우저가 비디오 태그를 지원하지 않습니다.
           </video>
         </div>
       </section>
